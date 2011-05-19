@@ -1,1 +1,10 @@
-empty file.
+To run this test, you need to build the native library it demonstrates accessing.
+
+On linux/gcc:
+  gcc -fPIC -shared -o lib/libmac-address.so lib/mac-address.c 
+
+On OSX:
+  gcc -m32 -shared -o lib/libmac-address.dylib lib/mac-address.c
+
+On Win32:
+  cl // XXX

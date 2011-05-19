@@ -10,7 +10,8 @@ char *getMACAddress()
   char *ret = malloc(MAC_STRING_LENGTH);
   struct ifreq s;
   int fd = socket(PF_INET, SOCK_DGRAM, IPPROTO_IP);
-
+  
+  // You may need to use "eth0" or another interface here instead of eth1
   strcpy(s.ifr_name, "eth1");
   if (fd >= 0 && ret && 0 == ioctl(fd, SIOCGIFHWADDR, &s))
   {

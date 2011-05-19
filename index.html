@@ -1,13 +1,12 @@
 <html>
 <head>
+    <title>Get MAC Address with Mozilla's Chromeless</title>
 </head>
 <body>
-    <div id="mac">
-    Mac Address Is:
-    </div>
+    <p id="mac">My MAC Address Is: </p>
     <script>
-        const macAddress = require('mac-address');
-        document.getElementById("mac").innerHTML += macAddress.getString();
+        const macAddress = require("mac-address");
+        document.getElementById("mac").innerHTML += macAddress.toString();
     </script>
 </body>
 </html>
