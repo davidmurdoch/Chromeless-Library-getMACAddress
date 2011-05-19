@@ -1,0 +1,13 @@
+<html>
+<head>
+</head>
+<body>
+    <div id="mac">
+    Mac Address Is:
+    </div>
+    <script>
+        const macAddress = require('mac-address');
+        document.getElementById("mac").innerHTML += macAddress.getString();
+    </script>
+</body>
+</html>
